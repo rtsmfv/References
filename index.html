@@ -23,7 +23,7 @@
             display: none;
             justify-content: center;
             align-items: center;
-            text-align:justify;
+            text-align:left;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
@@ -31,8 +31,8 @@
         .modal {
             position: fixed;
             top: 0;
-            left: 10%;
-            width: 80%;
+            left: 5%;
+            width: 90%;
             height: 100%;
             display: flex;
             justify-content: center;
@@ -41,9 +41,9 @@
         }
         .modal-content {
             background:  rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            text-align: justify;
+            text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             max-height: 80vh;
             overflow-y: auto;
@@ -54,8 +54,9 @@
         .hanging-indent {
             padding-left: 36px;
             text-indent: -36px;
-            margin-bottom: 15px;
+            margin-bottom: -15px;
             font-family: 'Times New Roman', Times, serif;
+            line-height: 2;
         }
     </style>
 </head>
@@ -81,12 +82,12 @@
     </script>
     <div class="modal" id="firstModal">
         <div class="modal-content">
-            <h2>LIST OF REFERENCES USED IN THE POSTER</h2>
+            <h3 style="text-align: center">LIST OF REFERENCES USED IN THE POSTER</h3>
             <p class="hanging-indent">Bohner, F., Gacser, A., & Toth, R. (2021). Epidemiological Attributes of Candida Species in Tropical Regions. <i>Current Tropical Medicine Reports, 8</i>(2), 59–68. https://doi.org/10.1007/s40475-021-00226-5</p>
             <p class="hanging-indent">Denning D. W. (2024). Global incidence and mortality of severe fungal disease. The Lancet. <i>Infectious diseases, 24</i>(7), e428–e438. https://doi.org/10.1016/S1473-3099(23)00692-8</p>
             <p class="hanging-indent">Ungcharoenwiwat, P., Thaweesuwanasak, M., Kanzaki, H., & Nitoda, T. (2023). Antibacterial and antioxidant activities, lethality assay and chemical profile in crude extract of <i>Biancaea sappan</i> (L.) TOD. for anti-vibrio agent. <i>Journal of King Saud University - Science, 35</i>(4), 102594. https://doi.org/10.1016/j.jksus.2023.102594</p>
             <br>
-            <p style="text-align: center"><u>Click to view list of all references</u></p>
+            <p style="text-align: center"><u>Click button to view list of all references</u></p>
             <div style="text-align: center;">
                 <button onclick="closeModal()">→</button>
             </div>
@@ -94,7 +95,10 @@
     </div>
     <div class="modal" id="secondModal">
         <div class="modal-content">
-            <h2> REFERENCES </h2>
+            <div style="text-align: left;">
+                <button onclick="goBackToFirstModal()">←</button>
+            </div>
+            <h3 style="text-align: center"> REFERENCES </h3>
             <p class="hanging-indent">Amir, A. (2024). <i>Fungal infections: A rising global concern by ISID emerging leader, Afreenish Amir</i>. ISID. https://isid.org/fungal-infections-a-rising-global-concern-by-isid-emerging-leader-afreenish-amir/</p>
             <p class="hanging-indent">Arkowitz, R. A., & Bassilana, M. (2019). Recent advances in understanding <i>Candida albicans</i> hyphal growth. <i>F1000Research</i>, <i>8</i>. https://doi.org/10.12688/f1000research.18546.1</p>
             <p class="hanging-indent">Barnard, R. T. (2019). The zone of inhibition. <i>Clinical Chemistry</i>, <i>65</i>(6), 819. https://doi.org/10.1373/clinchem.2018.299800</p>
@@ -131,6 +135,7 @@
             <p class="hanging-indent">Yamin, D., Wakil, A. M., Goni, M. D., Irekeola, A. A., & Hajissa, K. (2025). Trends of <i>Candida</i> species causing bloodstream infections in South-Eastern Asia: A systematic review and meta-analysis. <i>Asian Pacific Journal of Tropical Medicine</i>, <i>18</i>(2), 51-66. https://doi.org/10.4103/apjtm.apjtm_559_24</p>
             <p class="hanging-indent">Yuliana, Sufiawati, I., Dewi, I. M. W., & Hartantri, Y. (2025). Evaluation of Antifungal Activity Against <i>Candida albicans</i> Isolates From HIV-Positive Patients with Oral Candidiasis in a Major Referral Hospital, West Java, Indonesia. <i>HIV/AIDS-Research and Palliative Care</i>, 351-360.</p>
             <p class="hanging-indent">Zhang, Y., Worthy, S. J., Xu, S., He, Y., Wang, X., Song, X., Cao, M., & Yang, J. (2024). Phytochemical diversity and their adaptations to abiotic and biotic pressures in fine roots across a climatic gradient. <i>The Science of the total environment</i>, <i>927</i>, 172051. https://doi.org/10.1016/j.scitotenv.2024.172051</p>
+            <br>
             <div style="text-align: center;">
                 <button onclick="goBackToFirstModal()">←</button>
             </div>
