@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #56b0b2;
+            overflow: hidden;
+        }
+        .textbox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: auto;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align:justify;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 10%;
+            width: 80%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+        }
+        .modal-content {
+            background:  rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: justify;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .modal.show {
+            visibility: visible;
+        }
+        .hanging-indent {
+            padding-left: 36px;
+            text-indent: -36px;
+            margin-bottom: 15px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Show first modal on page load
+        window.onload = function() {
+            document.getElementById('firstModal').classList.add('show');
+        }
+
+        // Close first modal and show second modal
+        function closeModal() {
+            document.getElementById('firstModal').classList.remove('show');
+            document.getElementById('secondModal').classList.add('show');
+        }
+
+        // Go back to previous modal
+        function goBackToFirstModal() {
+            document.getElementById('secondModal').classList.remove('show');
+            document.getElementById('firstModal').classList.add('show');
+        }
+
+    </script>
+    <div class="modal" id="firstModal">
+        <div class="modal-content">
+            <h2>LIST OF REFERENCES USED IN THE POSTER</h2>
+            <p class="hanging-indent">Bohner, F., Gacser, A., & Toth, R. (2021). Epidemiological Attributes of Candida Species in Tropical Regions. <i>Current Tropical Medicine Reports, 8</i>(2), 59–68. https://doi.org/10.1007/s40475-021-00226-5</p>
+            <p class="hanging-indent">Denning D. W. (2024). Global incidence and mortality of severe fungal disease. The Lancet. <i>Infectious diseases, 24</i>(7), e428–e438. https://doi.org/10.1016/S1473-3099(23)00692-8</p>
+            <p class="hanging-indent">Ungcharoenwiwat, P., Thaweesuwanasak, M., Kanzaki, H., & Nitoda, T. (2023). Antibacterial and antioxidant activities, lethality assay and chemical profile in crude extract of <i>Biancaea sappan</i> (L.) TOD. for anti-vibrio agent. <i>Journal of King Saud University - Science, 35</i>(4), 102594. https://doi.org/10.1016/j.jksus.2023.102594</p>
+            <br>
+            <p style="text-align: center"><u>Click to view list of all references</u></p>
+            <div style="text-align: center;">
+                <button onclick="closeModal()">→</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="secondModal">
+        <div class="modal-content">
+            <h2> REFERENCES </h2>
+            <p class="hanging-indent">Amir, A. (2024). <i>Fungal infections: A rising global concern by ISID emerging leader, Afreenish Amir</i>. ISID. https://isid.org/fungal-infections-a-rising-global-concern-by-isid-emerging-leader-afreenish-amir/</p>
+            <p class="hanging-indent">Arkowitz, R. A., & Bassilana, M. (2019). Recent advances in understanding <i>Candida albicans</i> hyphal growth. <i>F1000Research</i>, <i>8</i>. https://doi.org/10.12688/f1000research.18546.1</p>
+            <p class="hanging-indent">Barnard, R. T. (2019). The zone of inhibition. <i>Clinical Chemistry</i>, <i>65</i>(6), 819. https://doi.org/10.1373/clinchem.2018.299800</p>
+            <p class="hanging-indent">Bohner, F., Gacser, A., & Toth, R. (2021). Epidemiological Attributes of <i>Candida</i> Species in Tropical Regions. <i>Current Tropical Medicine Reports</i>, <i>8</i>(2), 59–68. https://doi.org/10.1007/s40475-021-00226-5</p>
+            <p class="hanging-indent">d'Enfert, C., Kaune, A. K., Alaban, L. R., Chakraborty, S., Cole, N., Delavy, M., Kosmala, D., Marsaux, B., Fróis-Martins, R., Morelli, M., Rosati, D., Valentine, M., Xie, Z., Emritloll, Y., Warn, P. A., Bequet, F., Bougnoux, M. E., Bornes, S., Gresnigt, M. S., Hube, B., … Brown, A. J. P. (2021). The impact of the Fungus-Host-Microbiota interplay upon <i>Candida albicans</i> infections: current knowledge and new perspectives. <i>FEMS microbiology reviews</i>, <i>45</i>(3), fuaa060. https://doi.org/10.1093/femsre/fuaa060</p>
+            <p class="hanging-indent">Denning D. W. (2024). Global incidence and mortality of severe fungal disease. <i>The Lancet. Infectious diseases</i>, <i>24</i>(7), e428–e438. https://doi.org/10.1016/S1473-3099(23)00692-8</p>
+            <p class="hanging-indent">Duong, T. N., Le, M., Beardsley, J., Denning, D. W., Le, N., & Nguyen, B. T. (2023). Updated estimation of the burden of fungal disease in Vietnam. <i>Mycoses</i>, <i>66</i>(4), 346-353. https://doi.org/10.1111/myc.13559</p>
+            <p class="hanging-indent">Falcon, R. M. G., Alcazar, R. M. U., Guda, J. V., & Tantengco, O. A. G. (2024). A systematic review and meta-analysis on the prevalence of vulvovaginal candidiasis in Southeast Asian countries. <i>SciEnggJ</i>, <i>17</i>(Supplement), 341–355. https://doi.org/10.54645/202417suppyd-19</p>
+            <p class="hanging-indent">Food Safety Institute. (2023). <i>Implementing completely randomized designs in research</i>. Food Safety Institute. https://foodsafety.institute/research-methodology/completely-randomized-designs-research/</p>
+            <p class="hanging-indent">Heinrich, M., Jalil, B., Abdel-Tawab, M., Echeverria, J., Kulić, Ž., McGaw, L. J., Pezzuto, J. M., Potterat, O., & Wang, J. (2022). Best practice in the chemical characterisation of extracts used in pharmacological and toxicological research—The ConPhyMP—Guidelines12. <i>Frontiers in Pharmacology</i>, <i>13</i>. https://doi.org/10.3389/fphar.2022.953205</p>
+            <p class="hanging-indent">Hou, G. W., & Huang, T. (2024). Essential oils as promising treatments for treating <i>Candida albicans</i> infections: research progress, mechanisms, and clinical applications. <i>Frontiers in pharmacology</i>, <i>15</i>, 1400105. https://doi.org/10.3389/fphar.2024.1400105</p>
+            <p class="hanging-indent">Juayang, A. C., Lim, J. T., De los Reyes, Z. B., Tuante, M. B., Batiles, Z. P., Guino-o, J. V., Villanueva, F. A., & De los Reyes, G. B. (2019). Antifungal resistance of <i>candida</i> species in Bacolod city, Philippines. <i>Journal of Infectious Diseases and Epidemiology</i>, <i>5</i>(2). https://doi.org/10.23937/2474-3658/1510076</p>
+            <p class="hanging-indent">Li, Y., Kong, D., Fu, Y., Sussman, M. R., & Wu, H. (2020). The effect of developmental and environmental factors on secondary metabolites in medicinal plants. <i>Plant Physiology and Biochemistry</i>, <i>148</i>, 80–89. https://doi.org/10.1016/j.plaphy.2020.01.006</p>
+            <p class="hanging-indent">Mora Carpio, A. L., & Climaco, A. (2024). Candidemia. In <i>StatPearls</i>. StatPearls Publishing. https://www.ncbi.nlm.nih.gov/books/NBK436012/</p>
+            <p class="hanging-indent">Nurlinda, N., Handayani, V., & Rasyid, F. A. (2021). Spectrophotometric Determination of Total Flavonoid Content in <i>Biancaea Sappan</i> (<i>Caesalpinia sappan</i> L.) Leaves. <i>Jurnal Fitofarmaka Indonesia</i>, <i>8</i>(3), 1–4. https://doi.org/10.33096/jffi.v8i3.712.</p>
+            <p class="hanging-indent">Oh, Y. B., Lim, H. J., Byun, S. A., Choi, M. J., Choi, H., Shin, M. G., Lee, S. Y., & Shin, J. H. (2023). <i>Candida vulturna</i> Fungemia in an infant with congenital Megacolon from the Philippines. <i>Annals of Laboratory Medicine</i>, <i>43</i>(4), 395-397. https://doi.org/10.3343/alm.2023.43.4.395</p>
+            <p class="hanging-indent">Ostrowsky, B., Greenko, J., Adams, E., Quinn, M., O'Brien, B., Chaturvedi, V., Berkow, E., Vallabhaneni, S., Forsberg, K., Chaturvedi, S., Lutterloh, E., Blog, D., & C. auris Investigation Work Group (2020). <i>Candida auris</i> Isolates Resistant to Three Classes of Antifungal Medications - New York, 2019. <i>MMWR. Morbidity and mortality weekly report</i>, <i>69</i>(1), 6–9. https://doi.org/10.15585/mmwr.mm6901a2</p>
+            <p class="hanging-indent">Pang, Z., Chen, J., Wang, T., Gao, C., Li, Z., Guo, L., Xu, J., & Cheng, Y. (2021). Linking plant secondary metabolites and plant microbiomes: A review. <i>Frontiers in Plant Science</i>, <i>12</i>. https://doi.org/10.3389/fpls.2021.621276</p>
+            <p class="hanging-indent">Prasad, R., Nair, R., & Banerjee, A. (2019). Emerging Mechanisms of Drug Resistance in <i>Candida albicans</i>. <i>Progress in Molecular and Subcellular Biology</i>, <i>58</i>, 135–153. https://doi.org/10.1007/978-3-030-13035-0_6</p>
+            <p class="hanging-indent">Quantifying Health. (2021). <i>Posttest-only control group design: An introduction</i>. QUANTIFYING HEALTH. https://quantifyinghealth.com/posttest-only-control-group-design/</p>
+            <p class="hanging-indent">Safitri, R., Siahaan, M., & Ghozali, M. (2022). Antimicrobial activity of sappan wood extract (<i>Caesalpinia sappan</i> L.) against <i>streptococcus pneumoniae</i>. <i>International journal of health sciences</i>, 7881-7896. https://doi.org/10.53730/ijhs.v6ns1.6797</p>
+            <p class="hanging-indent">Sharma, B., Sharma, S., & Archu Harchanda. (2023). Bioactive compounds, pharmacological activity and food application of <i>Biancaea sappan</i> (Indian red wood): A critical review. <i>Journal of Wood Chemistry and Technology</i>, <i>43</i>(5), 253–270. https://doi.org/10.1080/02773813.2023.2237488</p>
+            <p class="hanging-indent">Sharma, M., & Chakrabarti, A. (2023). Candidiasis and Other Emerging Yeasts. <i>Current fungal infection reports</i>, <i>17</i>(1), 15–24. https://doi.org/10.1007/s12281-023-00455-3</p>
+            <p class="hanging-indent">Shinde, A. A., & Dhole, A. (2025). RESEARCH ON FORMULATION & EVALUATION OF FLUCONAZOLE GEL. <i>International Journal of Sciences and Innovation Engineering</i>, <i>2</i>(6), 245-251.</p>
+            <p class="hanging-indent">Szekely, J., Rakchang, W., Rattanaphan, P., & Kositpantawong, N. (2023). Fluconazole and echinocandin resistance of <i>Candida</i> species in invasive candidiasis at a university hospital during pre-COVID-19 and the COVID-19 outbreak. <i>Epidemiology & Infection</i>, <i>151</i>, e146. https://doi.org/10.1017/s0950268823001346</p>
+            <p class="hanging-indent">Talapko, J., Juzbašić, M., Matijević, T., Pustijanac, E., Bekić, S., Kotris, I., & Škrlec, I. (2021). <i>Candida albicans</i>-The Virulence Factors and Clinical Manifestations of Infection. <i>Journal of fungi (Basel, Switzerland)</i>, <i>7</i>(2), 79. https://doi.org/10.3390/jof7020079</p>
+            <p class="hanging-indent">Ungcharoenwiwat, P., Thaweesuwanasak, M., Kanzaki, H., & Nitoda, T. (2023). Antibacterial and antioxidant activities, lethality assay and chemical profile in crude extract of <i>Biancaea sappan</i> (L.) TOD. for anti-vibrio agent. <i>Journal of King Saud University - Science</i>, <i>35</i>(4), 102594. https://doi.org/10.1016/j.jksus.2023.102594</p>
+            <p class="hanging-indent">University of Illinois. (2023, February 11). <i>Fluconazole, oral tablet</i>. Medical News Today. https://www.medicalnewstoday.com/articles/fluconazole-oral-tablet</p>
+            <p class="hanging-indent">Vij, T., Anil, P. P., Shams, R., Dash, K. K., Kalsi, R., Pandey, V. K., Harsányi, E., Kovács, B., & Shaikh, A. M. (2023). A comprehensive review on bioactive compounds found in <i>Caesalpinia sappan</i>. <i>Molecules</i>, <i>28</i>(17), 6247. https://doi.org/10.3390/molecules28176247</p>
+            <p class="hanging-indent">Vila, T., Sultan, A. S., Montelongo-Jauregui, D., & Jabra-Rizk, M. A. (2020). Oral candidiasis: A disease of opportunity. <i>Journal of Fungi</i>, <i>6</i>(1), 15. https://doi.org/10.3390/jof6010015</p>
+            <p class="hanging-indent">Vlachou, N., Salmatzidis, E., Vlachou, C., Touliatos, Z., Roussos, G., Tserou, C., & Bozia, E. (2022). Interactions between medical plant-derived bioactive compounds: Focus on antimicrobial combination effects. <i>Antibiotics</i>, <i>11</i>, Article 1014. https://doi.org/10.3390/antibiotics11081014</p>
+            <p class="hanging-indent">World Health Organization. (2025). <i>Candidiasis (yeast infection)</i>. World Health Organization (WHO). https://www.who.int/news-room/fact-sheets/detail/candidiasis-%28yeast-infection%29</p>
+            <p class="hanging-indent">World Health Organization. (2022). <i>WHO fungal priority pathogens list to guide research, development and public health action</i>. World Health Organization (WHO). https://www.who.int/publications/i/item/9789240060241</p>
+            <p class="hanging-indent">Yamin, D., Wakil, A. M., Goni, M. D., Irekeola, A. A., & Hajissa, K. (2025). Trends of <i>Candida</i> species causing bloodstream infections in South-Eastern Asia: A systematic review and meta-analysis. <i>Asian Pacific Journal of Tropical Medicine</i>, <i>18</i>(2), 51-66. https://doi.org/10.4103/apjtm.apjtm_559_24</p>
+            <p class="hanging-indent">Yuliana, Sufiawati, I., Dewi, I. M. W., & Hartantri, Y. (2025). Evaluation of Antifungal Activity Against <i>Candida albicans</i> Isolates From HIV-Positive Patients with Oral Candidiasis in a Major Referral Hospital, West Java, Indonesia. <i>HIV/AIDS-Research and Palliative Care</i>, 351-360.</p>
+            <p class="hanging-indent">Zhang, Y., Worthy, S. J., Xu, S., He, Y., Wang, X., Song, X., Cao, M., & Yang, J. (2024). Phytochemical diversity and their adaptations to abiotic and biotic pressures in fine roots across a climatic gradient. <i>The Science of the total environment</i>, <i>927</i>, 172051. https://doi.org/10.1016/j.scitotenv.2024.172051</p>
+            <div style="text-align: center;">
+                <button onclick="goBackToFirstModal()">←</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>        }
+
+        function goBackToSecondModal() {
+            document.getElementById('thirdModal').classList.remove('show');
+            document.getElementById('secondModal').classList.add('show');
+        }
+
+        function goBackToThirdModal() {
+            document.getElementById('fourthModal').classList.remove('show');
+            document.getElementById('thirdModal').classList.add('show');
+        }
+
+        function goBackToFourthModal() {
+            document.getElementById('fifthModal').classList.remove('show');
+            document.getElementById('fourthModal').classList.add('show');
+        }
+
+        function goBackToFifthModal() {
+            document.getElementById('sixthModal').classList.remove('show');
+            document.getElementById('fifthModal').classList.add('show');
+        }
+
+        function goBackToSixthModal() {
+            document.getElementById('seventhModal').classList.remove('show');
+            document.getElementById('sixthModal').classList.add('show');
+        }
+
+        function goBackToFirstModal2() {
+            document.getElementById('seventhModal').classList.remove('show');
+            document.getElementById('firstModal').classList.add('show');
+        }
+    </script>
+    <div class="modal" id="firstModal">
+        <div class="modal-content">
+            <h2>hi jah!</h2>
+            <p>i think you already have an idea of what this is about and i know that i’m such a coward for deactivating after sending the link to u</p>
+            <p>(edit: nag-reactivate na ko...)</p>
+            <div style="text-align: center;">
+                <button onclick="closeModal()">→</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="secondModal">
+        <div class="modal-content">
+            <p>before u read this long message of mine, i just want to let u know nga i’m doing this w/o expecting anything in return…😵</p>
+            <div style="text-align: center;">
+                <button onclick="goBackToFirstModal()">←</button>
+                <button onclick="closeSecondModal()">→ (ugs ka-cringe)</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="thirdModal">
+        <div class="modal-content">
+             <p>aware ka naman guro nga i like you, right…? 😓 shhfhfhdhdh sorry way ko man gin-expect nga madevelop gid ang small crush ko simo nga nagstart sang araw ng lahi 😭😭😭 abi ko madula man dayon pero like sang gadugay nga gadugay na ta ga-talk as friends, damo man ko gakadiscover about simo and it’s like everything i learn abt u makes me admire u more 🫠 i’m so sorry if this will make things awkward between us… ahdhhd i’m just so confused about whether i should try confessing or just move on but i’m not rlly the type of person to leave things unsaid 😓 anyways… i genuinely enjoy spending time w u and i also hope you know nga i think you’re a vv admirable person (bisan daw buang ka kis a) 🫨 and even though i have a crush on you, i really treasure you as a friend so i hope we can stay as friends if u don’t feel the same, but it’s okay mn if nd mo keri 😅✌️ thanks sa time and advanced happy new year! :)
+             <br>
+             <div style="text-align: center; font-size: 175%;">
+             <a href="https://open.spotify.com/playlist/7seGk4dEm5oFVOxbNAKKHD?si=a74f2924b809479d">☆</a>
+             </div>
+             </p>
+             <div style="text-align: center;">    
+                <button onclick="goBackToSecondModal()">←</button>
+                <button onclick="closeThirdModal()">→</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="fourthModal">
+        <div class="modal-content">
+            <p>ps: hahaha i hope indi super oa para simo ang fact nga nag-ubra gid ko webpage just to confess… (nalingaw ko ubra ka amo ni tho HAHAHA) </p>
+            <div style="text-align: center;">    
+                <button onclick="goBackToThirdModal()">←</button>
+                <button onclick="closeFourthModal()">→</button>
+            </div>
+         </div>
+    </div>
+    <div class="modal" id="fifthModal">
+        <div class="modal-content">
+            <p>pss: nagdeact ko kay nahuya ko oopz kag tani indi super corny... gusto ko na magpalamon sa duta omg</p>
+            <div style="text-align: center;">    
+                <button onclick="goBackToFourthModal()">←</button>
+                <button onclick="closeFifthModal()">→</button>
+            </div>
+         </div>
+    </div>
+    <div class="modal" id="sixthModal">
+        <div class="modal-content">
+            <p>psss: pls don’t tell anyone sa room nga i made a webpage para mag-confess 😭</p>
+            <p>(also ik nga karandom ka home button AHHAHAHA okay bye)</p>
+            <div style="text-align: center;">    
+                <button onclick="goBackToFifthModal()">←</button>
+                <button onclick="closeSixthModal()">→</button>
+            </div>
+         </div>
+    </div>
+    <div class="modal" id="seventhModal">
+        <div class="modal-content">
+        <div style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
+            <p>so honestly, i’m not really sure as to why i’m doing this again but it’s probably because i just wanted to let my emotions out for a bit… honestly, i had a lot of thoughts i wanted to write down but i didn’t know what to start with, one thing i can say is that everything that i have thought of is all because i love you. i hate to admit it because what we had was merely a situationship, but i do love you a lot, and it’s not because you made me feel special or anything (i don’t think you ever did) but because of who you are as a person (this is honestly so embarrassing). i really did love everything about you, even if you were annoying sometimes. i’m really sorry for all the discomfort you had to go through that was caused by me or whatever we had… and i’m sorry for having romantic feelings for you. although i don’t think we would be close(?) friends if i never had a crush on you. maybe it would’ve been better that way though… i don’t know. i hope writing this is my way of letting you go and i’m sorry for not being able to move on from you. i hope that you’ll be able to enjoy life as much as you can and that you’ll be able to endure whatever obstacles life gives you (i know nga kaya mo na though). i don’t know why this feels like a goodbye message even though classmates man ta dyapon mag-g12… but thank you for making me experience this even though this is probably the biggest heartbreak i’ll ever have haha bye protostar</p>
+        </div>
+        <div style="text-align: center;">    
+            <button onclick="goBackToSixthModal()">←</button>
+            <button onclick="goBackToFirstModal2()">🏠︎</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
